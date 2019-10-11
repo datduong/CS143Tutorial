@@ -54,9 +54,9 @@ def do_1_split (features,labels_01,which_col,data_entropy) :
   num_people_in1 = np.sum(in_group_1)
   entropy_group_0 = scipy.stats.entropy ( get_prob_01 ( labels_01[in_group_0] ) )
   entropy_group_1 = scipy.stats.entropy ( get_prob_01 ( labels_01[in_group_1] ) )
-  expected_entropy_split_age = num_people_in0/num_people * entropy_group_0 + num_people_in1/num_people * entropy_group_1 
-  information_gain = data_entropy - expected_entropy_split_age
-  print ('information_gain is {}'.format(information_gain)) ## basically age is not useful feature in this dataset
+  expected_entropy_this_split = num_people_in0/num_people * entropy_group_0 + num_people_in1/num_people * entropy_group_1 
+  information_gain = data_entropy - expected_entropy_this_split
+  print ('information_gain is {}'.format(information_gain)) 
 
 
 ## let's experiment only the first 4 features Age, Sex, Body mass index, Average blood pressure. 
