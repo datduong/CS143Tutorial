@@ -38,7 +38,7 @@ def plot_contours(ax, clf, xx, yy, **params):
 
 fig, ax = plt.subplots()
 # title for the plots
-title = ('Decision surface of linear SVC ')
+title = ('Decision surface of SVC ')
 # Set-up grid for plotting.
 X0, X1 = X[:, 0], X[:, 1]
 xx, yy = make_meshgrid(X0, X1)
