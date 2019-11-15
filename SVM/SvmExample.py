@@ -5,9 +5,12 @@ Created on Fri Nov 15 01:52:23 2019
 @author: dat
 """
 
+
+
 import numpy as np
 from sklearn.svm import SVC
 import matplotlib.pyplot as plt
+
 
 X = np.array([[-1, -1], [-2, -1], [-2, 1], [2, 1]])
 y = np.array([1, 1, -1, -1])
@@ -44,7 +47,8 @@ X0, X1 = X[:, 0], X[:, 1]
 xx, yy = make_meshgrid(X0, X1)
 
 plot_contours(ax, clf, xx, yy, cmap=plt.cm.coolwarm, alpha=0.8)
-ax.scatter(X0, X1, c=y, cmap=plt.cm.coolwarm, s=20, edgecolors='k')
+ax.scatter(X0, X1, c=y, cmap=plt.cm.coolwarm, s=200, edgecolors='k')
 ax.set_title(title)
-ax.plot(new_point[:,0], new_point[:,1],'og')
+ax.plot(new_point[:,0], new_point[:,1],'oy',markersize=20)
 plt.show()
+
